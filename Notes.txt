@@ -1,0 +1,96 @@
+Database:
+-----------
+>> Organized collection of related data which can be accessed and manipulated easily.
+
+DBMS --> software used to work with DBs.
+
+Relational Database Management System 
+--------------------------------------
+>> Data is stored in form of Rows and Cols (Tables)
+>> SQL is must.
+Ex: MySQL, Oracle, PostgreSQL...
+
+DBMS 
+------
+>> Data is stored in form of document (BSON --> Binary JSON)
+Ex: MongoDB, MariaDB...
+
+MySQL 
+------
+>> Open Source Relational Database Management.
+
+MySQL server --> stores DB, data...
+MySQL Workbench --> IDE for MySQL
+MySQL Shell --> Terminal for MySQL
+
+
+Database --> Table ---> Data 
+(Schema)
+
+Entity --> Real time object
+Attributes --> Information about entity.
+
+actors --> name, age
+actorDetails --> id, name, age
+
+SQL --> Structured Query Language 
+
+Syntax:
+--------
+>> Case-insensitive.(a=A)
+>> Delimiter. statement terminator ";"
+
+Datatypes 
+-----------
+Numeric Datatypes 
+--------------------
+INT --> whole numbers. 1,2,-1,-2..200
+FLOAT --> Decimal Numbers. 1.22,3.14
+BIGINT --> large integers 
+DOUBLE --> large float.
+
+String Datatypes 
+-------------------
+CHAR(n) --> fixed length character string. Ex: char(5) --> "hello", "hi hi"
+VARCHAR(n) --> variable length character string. Ex: varchar(5) --> "q", "qw","qwe", "qwert"
+TEXT --> paragraph
+
+Constraints and Keys 
+----------------------
+Primary Key ---> No duplicates, No nulls. used to identify each records uniquely.
+
+Boolean 
+-------
+BOOLEAN --> 0 or 1
+
+DATE and TIME 
+---------------
+DATE --> "yyyy-mm-dd"... "2026-08-07"
+TIME --> "HH:MM:SS"
+DATETIME --> Both
+
+Query 
+------
+To Create a Database ---> CREATE DATABASE dbName;
+To Select a DB ---> USE dtabaseName;
+To Create a Table ---> CREATE TABLE tbname (
+    col1 dt constraints,
+    col2 dt constraints,
+    .
+    .
+);
+
+CRUD 
+----------
+
+
+actordetails 
+--------------------
+name     age    id(pk)(int)
+-----------------------------
+ken      40     1
+ben      32     2
+qwen     24     3
+ken      32     4
+
+update age 34 id=4
