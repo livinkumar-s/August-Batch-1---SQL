@@ -69,6 +69,18 @@ DATE --> "yyyy-mm-dd"... "2026-08-07"
 TIME --> "HH:MM:SS"
 DATETIME --> Both
 
+Operators
+-------------
+Comparison Operators
+------------------------
+= equal               
+<> != not equal 
+< lesser than 
+> greater than 
+<= lesser than or equal
+>= greater than or equal
+
+
 Query 
 ------
 To Create a Database ---> CREATE DATABASE dbName;
@@ -79,9 +91,26 @@ To Create a Table ---> CREATE TABLE tbname (
     .
     .
 );
+To create records --> INSERT INTO tbname (col details) VALUES (),()....;
+To Retrive data from a table --> SELECT (col details (*)) FROM tbname;
+To Update a record --> UPDATE tbname SET col=val;
+To Delete a record --> DELETE FROM tbname;
 
 CRUD 
 ----------
+Create --> INSERT
+Read --> SELECT
+Update --> UPDATE
+Delete --> DELETE
+
+SQL_SQFE_UPDATES --> update/delete Only one record. where clause is must. cond depends on PK.
+
+WHERE 
+-------
+>> To do filteration.
+Ex: SELECT,UPDATE,DELETE....... WHERE cond;
+conditions are expressions that return boolean.
+expression is combination of operators and operands.
 
 
 actordetails 
