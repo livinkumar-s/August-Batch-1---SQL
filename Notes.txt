@@ -80,6 +80,56 @@ Comparison Operators
 <= lesser than or equal
 >= greater than or equal
 
+Logical Operators 
+-------------------
+AND
+OR 
+NOT 
+
+IN, NOT IN 
+--------------
+Ex: ....col IN (v1,v2....)
+
+BETWEEN (inclusive range)
+---------
+>> Range Filtering
+Ex:..... col BETWEEN num1 AND num2;
+
+LIKE 
+-----
+>> pattern matching.
+
+Ex: .... col LIKE pattern;
+
+patterns or wildcard 
+-----------------------
+% --> matches 0 to inf number of char.
+_ --> matches only 1.
+
+starts with v --> "v%" --> "Vinutha", "vijay"
+ends with a --> "%a" --> "anitha", "a", "vijay"
+contains a --> "%a%" --> "vijay"
+
+"____a" --> "arya", "surya"
+
+
+ORDER BY 
+---------
+Arranges the records 
+Ex:........ORDER BY col ASC/DESC;
+
+LIMIT/OFFSET 
+---------------
+L --> limit the number of records.
+O --> skips the initial records;
+
+Ex: ..... LIMIT num OFFSET num;
+
+1000 results
+--------------
+1 --> 1-10
+2 --> 11-20
+
 
 Query 
 ------
