@@ -130,6 +130,38 @@ Ex: ..... LIMIT num OFFSET num;
 1 --> 1-10
 2 --> 11-20
 
+Functions
+------------
+>> It is a pre defined operation in MySQL that takes input and returns a result.
+
+Numeric Functions 
+------------------
+ROUND(num,dig) --> Rounds off a decimal number to nearest integer.
+FLOOR(dec)
+CEIL(dec)
+ABS(num)
+POWER(n1,n2)
+SQRT(num)
+MOD(n1,n2)
+
+String Functions 
+-------------------
+CONCAT(str1,str2....)
+length(str)
+UPPER(str)
+LOWER(str)
+TRIM(str)
+LTRIM(str)
+RTRIM(str)
+SUBSTRING(str, start, length)
+REPLACE(str,subStr,newStr)
+
+Date and Time 
+---------------
+curdate()
+curtime()
+now()
+datediff(d1,d2)
 
 Query 
 ------
