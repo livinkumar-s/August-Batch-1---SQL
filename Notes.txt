@@ -57,7 +57,20 @@ TEXT --> paragraph
 
 Constraints and Keys 
 ----------------------
-Primary Key ---> No duplicates, No nulls. used to identify each records uniquely.
+Primary Key ---> No duplicates, No nulls. used to identify each records uniquely. (mysql will index the PK).
+Foreign Key ---> It Relates 2 tables. refferential integrity.
+FOREIGN KEY (col name) REFRERENCES col
+
+
+NOT NULL --> no null values in it.
+UNIQUE --> no duplicates.
+AUTO_INCREAMENT --> generate sequential numbers.
+CHECK --> add records conditionally Ex: CHECK (cond)
+ENUM ---> enum (str1,str2)
+DEFAULT
+
+ACTIONS 
+---------
 
 Boolean 
 -------
@@ -194,14 +207,23 @@ Ex: SELECT,UPDATE,DELETE....... WHERE cond;
 conditions are expressions that return boolean.
 expression is combination of operators and operands.
 
+cricketer 
+------------
+id(pk)
+-------------------------------------------------------------------------------------------
+1	Virat Kohli	        Batsman	    virat.kohli@example.com	        9876543210	150	1
+2	Jasprit Bumrah	    Bowler	    jasprit.bumrah@example.com	    9876543211	120	1
+3	Ravindra Jadeja	    All-Rounder	ravindra.jadeja@example.com	    9876543212	110	1
+7	MS Dhoni	        Keeper	    ms.dhoni@example.com	        9876543213	100	1
+8	Rohit Sharma	    Batsman	    rohit.sharma@example.com	    9876543214	130	1
+9	Hardik Pandya	    All-Rounder	hardik.pandya@example.com	    9876543215	110	1
+10	Bhuvneshwar Kumar	Bowler	    bhuvneshwar.kumar@example.com	9876543216	120	1
+16	Sachin Tendulkar	Batsman	    sachin.tendulkar@example.com	9876543219	150	0
 
-actordetails 
---------------------
-name     age    id(pk)(int)
------------------------------
-ken      40     1
-ben      32     2
-qwen     24     3
-ken      32     4
-
-update age 34 id=4
+jersey 
+----------
+id(pk) jersey playerId(fk-->id(cricketer))
+--------------------------
+1       7       7
+2       18      1
+3       45      8
