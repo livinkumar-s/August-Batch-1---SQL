@@ -29,3 +29,17 @@ on c.id=i.playerId;
 select c.name,i.team,j.jersey from cricketer c inner join
 iplteam i on c.id=i.playerId inner join 
 jersey j on c.id=j.playerId;
+
+select * from actordetails;
+ALTER TABLE actordetails ADD latestMovie varchar(50);
+ALTER TABLE actordetails MODIFY name varchar(50);
+ALTER TABLE actordetails CHANGE latestMovie lastMovie varchar(40);
+ALTER TABLE actordetails RENAME COLUMN lastMovie TO latestMovie;
+ALTER TABLE actors DROP COLUMN latestMovie;
+
+ALTER TABLE actordetails RENAME TO actors;
+
+UPDATE actordetails SET latestmovie="jananayagan" where id=1;
+
+ALTER TABLE actors ADD PRIMARY KEY (id);
+ALTER TABLE actors DROP PRIMARY KEY;
