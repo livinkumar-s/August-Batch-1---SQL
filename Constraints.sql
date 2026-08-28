@@ -15,3 +15,13 @@ insert into cricketer (name,role,email,phone,cent,isActive) VALUES
 
 
 select * from cricketer;
+
+CREATE TABLE jersey (
+id int primary key auto_increment,
+jersey int not null,
+playerId int,
+foreign key (playerId) references cricketer(id)
+);
+
+insert into jersey (jersey,playerId) vALUES 
+(7,17);
