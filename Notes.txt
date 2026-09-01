@@ -42,7 +42,7 @@ Syntax:
 
 DDL --> Data Defenition Languages --> ALTER, CREATE...DROP, TRUNCATE
 DML --> Data Manipulation Languages --> INSERT, UPDATE, DELETE (reverse)
-DQL --> Date Query Language --> SELECT 
+DQL --> Data Query Language --> SELECT 
 TCL --> Transaction Control Language --> 
 DCL --> Data Control Language
 
@@ -208,7 +208,7 @@ SQL_SQFE_UPDATES --> update/delete Only one record. where clause is must. cond d
 
 WHERE 
 -------
->> To do filteration.
+>> To do filteration with records.
 Ex: SELECT,UPDATE,DELETE....... WHERE cond;
 conditions are expressions that return boolean.
 expression is combination of operators and operands.
@@ -257,3 +257,26 @@ Full outer Join
 >> It retrives all records from both tables
 left join (union) right join.
 
+Aggregation Grouping 
+---------------------
+Aggregation --> it means combining multiple rows and producing single summarized value.
+
+count --> count the number of records, number of data
+sum --> sum of all values.
+avg --> average of values.
+min --> smallest
+max --> largest
+
+Grouping 
+---------
+GROUP BY  (retriving groups)
+>> Grouping the records that have same value in a column.
+Ex: select aggrCol...... GROUP BY col;
+
+where --> group by --> aggregation --> having
+
+fruit	5	20.6    [1,2,6,9,13]
+gadgets	5	17900
+veg	    5	9.4
+
+HAVING  --> filter the groups.
