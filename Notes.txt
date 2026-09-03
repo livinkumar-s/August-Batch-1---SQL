@@ -43,7 +43,7 @@ Syntax:
 DDL --> Data Defenition Languages --> ALTER, CREATE...DROP, TRUNCATE
 DML --> Data Manipulation Languages --> INSERT, UPDATE, DELETE (reverse)
 DQL --> Data Query Language --> SELECT 
-TCL --> Transaction Control Language --> 
+TCL --> Transaction Control Language --> ROLLBACK, COMMIT, AUTOCOMMIT
 DCL --> Data Control Language
 
 Datatypes 
@@ -280,3 +280,25 @@ gadgets	5	17900
 veg	    5	9.4
 
 HAVING  --> filter the groups.
+
+Sub queries 
+-------------
+>> query written inside another.(nested, inner query)
+main query.....(sub query).
+
+>> subquery gets executed first.
+>> main query next.
+
+Single Row subquery
+----------------------
+>> subquery returns single row.
+
+Multi row subquery 
+-----------------------
+>> subquery returns multiple rows.
+ANY, ALL.
+IN, NOT
+
+Correlated subquery
+------------------
+>> inner query depends outer. outer query depends on inner.
