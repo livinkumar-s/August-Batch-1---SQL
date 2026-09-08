@@ -302,3 +302,26 @@ IN, NOT
 Correlated subquery
 ------------------
 >> inner query depends outer. outer query depends on inner.
+
+Actions 
+Transaction
+Stored procedures
+Views and Indexes 
+
+Transaction 
+-----------
+COMMIT (To save the changes)
+ROLLBACK (To reverse the changes (uncommitted))
+AUTOCOMMIT --> SET autocommit=0;
+SAVEPOINT --> SAVEPOINT (name);
+
+>> Transaction lets you execute multiple DML queries as single unit.
+
+ACID 
+-------
+Atomicity --> all or nothing
+Consistency --> data remains valid always
+Isolation --> concurrent transactions are controlled. so they won't interfere
+Durability --> after COMMIT, changes persist.
+
+(u1(10)-->u2)... (u3(5)-->u2)

@@ -62,3 +62,4 @@ select * from students s1 where
 mark > (select avg(mark) from students where dept="EEE");
 
 select dept,avg(marks) from students;
+
