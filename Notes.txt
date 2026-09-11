@@ -43,7 +43,7 @@ Syntax:
 DDL --> Data Defenition Languages --> ALTER, CREATE...DROP, TRUNCATE
 DML --> Data Manipulation Languages --> INSERT, UPDATE, DELETE (reverse)
 DQL --> Data Query Language --> SELECT 
-TCL --> Transaction Control Language --> ROLLBACK, COMMIT, AUTOCOMMIT
+TCL --> Transaction Control Language --> ROLLBACK, COMMIT, AUTOCOMMIT, SAVEPOINT, START TRANSACTION
 DCL --> Data Control Language
 
 Datatypes 
@@ -77,6 +77,27 @@ DEFAULT
 
 ACTIONS 
 ---------
+ON DELETE, ON UPDATE
+
+CASCADE --> Foreign Key ..... ON DELETE CASCADE ON UPDATE CASCADE
+SET NULL 
+NO ACTIONS
+RESTRICT
+
+1	John Doe
+2	Jane Smith
+3	Alice Johnson
+4	Bob Brown
+5	Charlie Davis
+
+
+1	Laptop	    1
+2	Smartphone	2
+3	Tablet	    1
+4	Headphones	3
+5	Monitor	    4
+6	Keyboard	5
+
 
 Boolean 
 -------
@@ -303,11 +324,6 @@ Correlated subquery
 ------------------
 >> inner query depends outer. outer query depends on inner.
 
-Actions 
-Transaction
-Stored procedures
-Views and Indexes 
-
 Transaction 
 -----------
 COMMIT (To save the changes)
@@ -325,3 +341,51 @@ Isolation --> concurrent transactions are controlled. so they won't interfere
 Durability --> after COMMIT, changes persist.
 
 (u1(10)-->u2)... (u3(5)-->u2)
+
+Views 
+---------
+>> It is a virtual table created from the result of a select query.
+>> It does not hold actual data.
+
+To create view --> CREATE VIEW viewName AS SELECT....
+To drop a view --> DROP VIEW viewName;
+To Update a view --> CREATE OR REPLACE VIEW viewname AS SELECT.....
+
+Table ---> uname, email, phone, fname, lname, password, remail
+
+Users --> UserView (uname, email, phone)
+Admin --> AdminView(uname, email, phone, fname, lname)
+
+Stored Procedures 
+-------------------
+>> It is a predefined set of SQL statements that can be executed whenever needed.
+
+DELIMITER $$
+
+CREATE PROCEDURE procName()
+BEGIN 
+............;
+..............;
+END $$
+
+DELIMITER ;
+
+
+To Call a procedure--> CALL pname();
+
+Parameters 
+-------------
+IN -> pass value to the procedure
+OUT -> Getting value from procedure
+INOUT --> Both
+
+p1(IN a)
+p1(val)
+
+p2(OUT a)
+p2(var)
+
+p3(INOUT a)
+var=val
+p3(var)
+
